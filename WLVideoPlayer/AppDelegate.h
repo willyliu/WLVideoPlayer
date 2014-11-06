@@ -8,8 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class WLVideoView;
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-
-
+@property (weak) IBOutlet WLVideoView *videoView;
 @end
 

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WLVideoView.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	// Insert code here to initialize your application
+	[self.videoView setVideoURL:[NSURL URLWithString:@"https://archive.org/download/Windows7WildlifeSampleVideo/Wildlife_512kb.mp4"]];
+
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

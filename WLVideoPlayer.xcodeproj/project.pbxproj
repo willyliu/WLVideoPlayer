@@ -12,6 +12,8 @@
 		8BA7C7A119FF2C4D003AEC43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BA7C7A019FF2C4D003AEC43 /* Images.xcassets */; };
 		8BA7C7A419FF2C4D003AEC43 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BA7C7A219FF2C4D003AEC43 /* MainMenu.xib */; };
 		8BA7C7B019FF2C4D003AEC43 /* WLVideoPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7C7AF19FF2C4D003AEC43 /* WLVideoPlayerTests.m */; };
+		8BA7C7BB19FF2FA0003AEC43 /* WLVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7C7BA19FF2FA0003AEC43 /* WLVideoView.m */; };
+		8BA7C7BE19FF3021003AEC43 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA7C7BD19FF3021003AEC43 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,9 @@
 		8BA7C7A919FF2C4D003AEC43 /* WLVideoPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WLVideoPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA7C7AE19FF2C4D003AEC43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BA7C7AF19FF2C4D003AEC43 /* WLVideoPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLVideoPlayerTests.m; sourceTree = "<group>"; };
+		8BA7C7B919FF2FA0003AEC43 /* WLVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLVideoView.h; sourceTree = "<group>"; };
+		8BA7C7BA19FF2FA0003AEC43 /* WLVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLVideoView.m; sourceTree = "<group>"; };
+		8BA7C7BD19FF3021003AEC43 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BA7C7BE19FF3021003AEC43 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +66,7 @@
 			children = (
 				8BA7C79819FF2C4D003AEC43 /* WLVideoPlayer */,
 				8BA7C7AC19FF2C4D003AEC43 /* WLVideoPlayerTests */,
+				8BA7C7BC19FF2FFC003AEC43 /* Frameworks */,
 				8BA7C79719FF2C4D003AEC43 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,6 +88,8 @@
 				8BA7C7A019FF2C4D003AEC43 /* Images.xcassets */,
 				8BA7C7A219FF2C4D003AEC43 /* MainMenu.xib */,
 				8BA7C79919FF2C4D003AEC43 /* Supporting Files */,
+				8BA7C7B919FF2FA0003AEC43 /* WLVideoView.h */,
+				8BA7C7BA19FF2FA0003AEC43 /* WLVideoView.m */,
 			);
 			path = WLVideoPlayer;
 			sourceTree = "<group>";
@@ -109,6 +118,15 @@
 				8BA7C7AE19FF2C4D003AEC43 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8BA7C7BC19FF2FFC003AEC43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BA7C7BD19FF3021003AEC43 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			path = WLVideoPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +230,7 @@
 			files = (
 				8BA7C79F19FF2C4D003AEC43 /* main.m in Sources */,
 				8BA7C79D19FF2C4D003AEC43 /* AppDelegate.m in Sources */,
+				8BA7C7BB19FF2FA0003AEC43 /* WLVideoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +347,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = WLVideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -339,7 +360,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = WLVideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
